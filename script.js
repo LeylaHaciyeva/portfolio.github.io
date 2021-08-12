@@ -1,4 +1,4 @@
-$(window).on("load", function () {
+$(document).on("load", function () {
     $(".loading").css("display", "flex").css("justify-content", "center").css("align-items", "center")
     $("body").css("overflow", "hidden")
 });
