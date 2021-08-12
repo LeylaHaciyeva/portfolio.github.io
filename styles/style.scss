@@ -1,0 +1,221 @@
+@import "reset.scss";
+@import "font.scss";
+@import "color.scss";
+@import "mediaquery.scss";
+
+
+%absoluteCenter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+%flexEnd {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+%flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+%gridCenter {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+%transition {
+  transition: all .4s ease;
+}
+
+.loading{
+  @extend %absoluteCenter;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+  color: white;
+  font-family: $logoFont;
+  font-size: 30px;
+}
+.header {
+  background-color: $darkViolet;
+
+  .navbar {
+    position: relative;
+
+    &__logo {
+      overflow: hidden;
+
+      a {
+        color: white;
+        font-family: $logoFont;
+        font-weight: bold;
+        font-size: 30px;
+        padding-top: 10px;
+        @extend %transition;
+
+        &:hover {
+          cursor: pointer;
+          color: $lightViolet;
+          @extend %transition;
+        }
+
+        @include small {
+          font-size: 19px;
+        }
+      }
+    }
+
+    &__menu {
+      @extend %flexEnd;
+
+      @include medium {
+        display: none;
+      }
+    }
+
+    &__item {
+      margin-left: 15px;
+    }
+
+    &__link {
+      color: white;
+      font-family: $menuFont;
+      font-size: 20px;
+      @extend %transition;
+
+      &:hover {
+        color: $lightViolet;
+        @extend %transition;
+      }
+    }
+
+    &__icon {
+      display: none;
+
+      i {
+        color: white;
+
+        &:hover {
+          color: $lightViolet;
+          @extend %transition;
+        }
+      }
+
+      @include medium {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        font-size: 18px;
+      }
+
+    }
+
+
+  }
+
+  .navbar__mobile {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $darkViolet;
+    z-index: 8;
+    @extend %transition;
+    @extend %gridCenter;
+
+    @include small {
+      top: 40px;
+    }
+
+    &__menu {
+      padding: 0;
+    }
+
+    &__item {
+      padding: 10px 0;
+    }
+
+    &__link {
+      color: white;
+      font-family: $menuFont;
+      font-size: 20px;
+      @extend %transition;
+
+      &:hover {
+        color: $lightViolet;
+        @extend %transition;
+      }
+    }
+  }
+
+  .active {
+    left: 0;
+    @extend %gridCenter;
+  }
+}
+
+.about {
+  padding: 50px 0;
+  text-align: justify;
+
+  &__text {
+    padding-top: 120px;
+
+    @include medium {
+      padding-top: 50px;
+    }
+
+    h3 {
+      color: black;
+      font-family: $aboutHeader;
+    }
+
+    h5 {
+      color: black;
+      font-family: $aboutDesc;
+      letter-spacing: 1.2px;
+    }
+
+    p {
+      font-family: $aboutDesc;
+      font-size: 16px;
+      color: $darkGrey;
+      line-height: 1.5rem;
+      padding: 10px 0;
+    }
+
+    span {
+      font-size: 20px;
+    }
+
+    h6 {
+      font-family: $aboutDesc;
+      font-size: 18px;
+      color: black;
+      padding: 5px 0;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 10px solid $darkViolet;
+
+    @include small {
+      height: auto;
+    }
+  }
+}

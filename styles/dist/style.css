@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body ul {
+  margin: 0;
+}
+body ul li {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover {
+  text-decoration: none;
+}
+
+.header .navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header .navbar__mobile__link:hover, .header .navbar__mobile__link, .header .navbar__mobile, .header .navbar__icon i:hover, .header .navbar__link:hover, .header .navbar__link, .header .navbar__logo a:hover, .header .navbar__logo a {
+  transition: all 0.4s ease;
+}
+
+.header {
+  background-color: #530a53;
+}
+.header .navbar {
+  position: relative;
+}
+.header .navbar__logo {
+  overflow: hidden;
+}
+.header .navbar__logo a {
+  color: white;
+  font-family: "WindSong", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+}
+.header .navbar__logo a:hover {
+  cursor: pointer;
+  color: #d43fd4;
+}
+@media (max-width: 280px) {
+  .header .navbar__logo a {
+    font-size: 19px;
+  }
+}
+@media (max-width: 768px) {
+  .header .navbar__menu {
+    display: none;
+  }
+}
+.header .navbar__item {
+  margin-left: 15px;
+}
+.header .navbar__link {
+  color: white;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 20px;
+}
+.header .navbar__link:hover {
+  color: #d43fd4;
+}
+.header .navbar__icon {
+  display: none;
+}
+.header .navbar__icon i {
+  color: white;
+}
+.header .navbar__icon i:hover {
+  color: #d43fd4;
+}
+@media (max-width: 768px) {
+  .header .navbar__icon {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 18px;
+  }
+}
+.header .navbar__mobile {
+  width: 100%;
+  height: 600px;
+  background-color: #530a53;
+}
+.header .navbar__mobile .navbar__mobile .active {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header .navbar__mobile__menu {
+    display: grid;
+    justify-content: center;
+  }
+}
+.header .navbar__mobile__item {
+  padding: 10px 0;
+}
+.header .navbar__mobile__link {
+  color: white;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 20px;
+}
+.header .navbar__mobile__link:hover {
+  color: #d43fd4;
+}
+
+.about {
+  padding: 50px 0;
+  text-align: justify;
+}
+.about__text {
+  padding-top: 120px;
+}
+@media (max-width: 768px) {
+  .about__text {
+    padding-top: 50px;
+  }
+}
+.about__text h3 {
+  color: black;
+  font-family: "Acme", sans-serif;
+}
+.about__text h5 {
+  color: black;
+  font-family: "Tajawal", sans-serif;
+  letter-spacing: 1.2px;
+}
+.about__text p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  line-height: 1.5rem;
+  padding: 10px 0;
+}
+.about__text span {
+  font-size: 20px;
+}
+.about__text h6 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  color: black;
+  padding: 5px 0;
+}
+.about__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: 10px solid #530a53;
+}
+@media (max-width: 280px) {
+  .about__img {
+    height: auto;
+  }
+}

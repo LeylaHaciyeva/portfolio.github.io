@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body ul {
+  margin: 0;
+}
+
+body ul li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.header .navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header .navbar__mobile, .header .active {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .navbar__logo a, .header .navbar__logo a:hover, .header .navbar__link, .header .navbar__link:hover, .header .navbar__icon i:hover, .header .navbar__mobile, .header .navbar__mobile__link, .header .navbar__mobile__link:hover {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.loading {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+  color: white;
+  font-family: "WindSong", cursive;
+  font-size: 30px;
+}
+
+.header {
+  background-color: #530a53;
+}
+
+.header .navbar {
+  position: relative;
+}
+
+.header .navbar__logo {
+  overflow: hidden;
+}
+
+.header .navbar__logo a {
+  color: white;
+  font-family: "WindSong", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.header .navbar__logo a:hover {
+  cursor: pointer;
+  color: #d43fd4;
+}
+
+@media (max-width: 280px) {
+  .header .navbar__logo a {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .navbar__menu {
+    display: none;
+  }
+}
+
+.header .navbar__item {
+  margin-left: 15px;
+}
+
+.header .navbar__link {
+  color: white;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.header .navbar__link:hover {
+  color: #d43fd4;
+}
+
+.header .navbar__icon {
+  display: none;
+}
+
+.header .navbar__icon i {
+  color: white;
+}
+
+.header .navbar__icon i:hover {
+  color: #d43fd4;
+}
+
+@media (max-width: 768px) {
+  .header .navbar__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+  }
+}
+
+.header .navbar__mobile {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #530a53;
+  z-index: 8;
+}
+
+@media (max-width: 280px) {
+  .header .navbar__mobile {
+    top: 40px;
+  }
+}
+
+.header .navbar__mobile__menu {
+  padding: 0;
+}
+
+.header .navbar__mobile__item {
+  padding: 10px 0;
+}
+
+.header .navbar__mobile__link {
+  color: white;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.header .navbar__mobile__link:hover {
+  color: #d43fd4;
+}
+
+.header .active {
+  left: 0;
+}
+
+.about {
+  padding: 50px 0;
+  text-align: justify;
+}
+
+.about__text {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .about__text {
+    padding-top: 50px;
+  }
+}
+
+.about__text h3 {
+  color: black;
+  font-family: "Acme", sans-serif;
+}
+
+.about__text h5 {
+  color: black;
+  font-family: "Tajawal", sans-serif;
+  letter-spacing: 1.2px;
+}
+
+.about__text p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+  line-height: 1.5rem;
+  padding: 10px 0;
+}
+
+.about__text span {
+  font-size: 20px;
+}
+
+.about__text h6 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  color: black;
+  padding: 5px 0;
+}
+
+.about__img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 10px solid #530a53;
+}
+
+@media (max-width: 280px) {
+  .about__img {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
