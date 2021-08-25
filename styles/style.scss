@@ -29,11 +29,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
 %flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 %gridCenter {
   display: grid;
   align-items: center;
@@ -94,6 +96,16 @@
   }
 }
 
+@keyframes typewritting {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 165px;
+  }
+}
+
 .loading {
   @extend %gridCenter;
   @extend %absoluteCenter;
@@ -117,9 +129,11 @@
     height: 60px;
     z-index: 25;
     background-color: $darkViolet;
-    @include small{
+
+    @include small {
       height: 45px;
     }
+
     .navbar {
       position: relative;
 
@@ -248,7 +262,8 @@
   }
 
   .about {
-    padding: 100px 0 50px 0;
+    overflow: hidden;
+    padding: 70px 0 50px 0;
 
     &__text {
       position: absolute;
@@ -262,14 +277,30 @@
       h3 {
         color: black;
         font-family: $aboutHeader;
+        position: relative;
+        display: block;
+
+        &:before {
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          content: "";
+          background-color: white;
+          border-left: 3px solid black;
+          display: block;
+          width: 165px;
+          height: 100%;
+          animation: typewritting steps(24) infinite;
+          animation-duration: 5s;
+        }
       }
 
       h5 {
         color: black;
         font-family: $aboutDesc;
         letter-spacing: 1.2px;
-        padding-bottom: 15px;
-
+        padding-bottom: 15px;      
         @include small {
           letter-spacing: 0;
         }
@@ -329,7 +360,7 @@
         display: block;
         @extend %absoluteCenter;
         background: black;
-        opacity: .4;
+        opacity: .7;
       }
 
       &:hover:before {
@@ -339,6 +370,7 @@
         background: black;
         opacity: .1;
         @extend %transition;
+
       }
 
       img {
@@ -387,6 +419,7 @@
         &:hover {
           background-color: $lightViolet;
           @extend %transition;
+          @extend %animationShake;
         }
 
         @include medium {
@@ -409,7 +442,7 @@
     width: 100%;
 
     .row {
-     @extend %flexCenter;
+      @extend %flexCenter;
       padding: 5px 0;
 
     }

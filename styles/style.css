@@ -86,7 +86,7 @@ body a:hover {
   transition: all .4s ease;
 }
 
-.content .header .navbar__logo:hover, .content .header .navbar__item:hover, .content .footer a i:hover {
+.content .header .navbar__logo:hover, .content .header .navbar__item:hover, .content .projects__btns a:hover, .content .footer a i:hover {
   -webkit-animation: shake 0.9s;
           animation: shake 0.9s;
 }
@@ -182,6 +182,24 @@ body a:hover {
   100% {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
             transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@-webkit-keyframes typewritting {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 165px;
+  }
+}
+
+@keyframes typewritting {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 165px;
   }
 }
 
@@ -330,7 +348,8 @@ body a:hover {
 }
 
 .content .about {
-  padding: 100px 0 50px 0;
+  overflow: hidden;
+  padding: 70px 0 50px 0;
 }
 
 .content .about__text {
@@ -348,6 +367,25 @@ body a:hover {
 .content .about__text h3 {
   color: black;
   font-family: "Acme", sans-serif;
+  position: relative;
+  display: block;
+}
+
+.content .about__text h3:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: "";
+  background-color: white;
+  border-left: 3px solid black;
+  display: block;
+  width: 165px;
+  height: 100%;
+  -webkit-animation: typewritting steps(24) infinite;
+          animation: typewritting steps(24) infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .content .about__text h5 {
@@ -414,7 +452,7 @@ body a:hover {
   content: "";
   display: block;
   background: black;
-  opacity: .4;
+  opacity: .7;
 }
 
 .content .projects__img:hover:before {
