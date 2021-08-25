@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body ul {
   margin: 0;
@@ -40,6 +41,12 @@ body a:hover {
   justify-content: space-between;
 }
 
+.content .footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .content .header .active, .content .header .navbar__mobile, .loading {
   display: grid;
   align-items: center;
@@ -50,6 +57,45 @@ body a:hover {
   transition: all 0.4s ease;
 }
 
+.content .footer a i:hover, .content .header .navbar__item:hover, .content .header .navbar__logo:hover {
+  animation: shake 0.9s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 .loading {
   background-color: black;
   width: 100%;
@@ -64,7 +110,18 @@ body a:hover {
   display: none;
 }
 .content .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60px;
+  z-index: 25;
   background-color: #530a53;
+}
+@media (max-width: 280px) {
+  .content .header {
+    height: 45px;
+  }
 }
 .content .header .navbar {
   position: relative;
@@ -109,6 +166,7 @@ body a:hover {
 }
 .content .header .navbar__icon i {
   color: white;
+  font-size: 18px;
 }
 .content .header .navbar__icon i:hover {
   color: #ff10ff;
@@ -118,7 +176,6 @@ body a:hover {
     display: flex;
     justify-content: end;
     align-items: center;
-    font-size: 18px;
   }
 }
 .content .header .navbar__mobile {
@@ -128,7 +185,7 @@ body a:hover {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 280px;
   background-color: #530a53;
   z-index: 8;
 }
@@ -155,7 +212,7 @@ body a:hover {
   left: 0;
 }
 .content .about {
-  padding: 50px 0;
+  padding: 100px 0 50px 0;
 }
 .content .about__text {
   position: absolute;
@@ -194,9 +251,10 @@ body a:hover {
 }
 .content .about__text h6 {
   font-family: "Tajawal", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   color: black;
   padding: 5px 0;
+  text-align: justify;
 }
 .content .about__img {
   width: 100%;
@@ -278,7 +336,28 @@ body a:hover {
 }
 @media (max-width: 280px) {
   .content .projects__btns a {
-    font-size: 10px;
-    padding: 4px;
+    font-size: 11px;
   }
+}
+.content .footer {
+  background-color: #530a53;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.content .footer .row {
+  padding: 5px 0;
+}
+.content .footer a {
+  text-decoration: none;
+  color: white;
+}
+.content .footer a i {
+  font-size: 20px;
+  margin: 5px;
+}
+.content .footer a i:hover {
+  color: #ff10ff;
 }
